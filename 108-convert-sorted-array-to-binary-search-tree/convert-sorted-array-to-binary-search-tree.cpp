@@ -12,7 +12,7 @@
  */
 class Solution {
 public:
-    TreeNode* createBinaryTree(const vector<int>& nums, int start, int end) {
+    TreeNode* createBinaryTree( vector<int>& nums, int start, int end) {
         if (start > end)
             return NULL;
         int mid = start + (end - start) / 2;
