@@ -18,8 +18,10 @@ public:
         if(!root->left && !root->right)
         {
             ans+=(value*10)+root->val;
+            cout<<"ans :"<<ans<<endl;
         }
         value=(value*10)+root->val;
+        cout<<"value "<<value<<"\n";
         findSumofPaths(root->left,ans,value);
         findSumofPaths(root->right,ans,value);
     }
