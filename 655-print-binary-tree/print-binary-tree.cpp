@@ -20,7 +20,7 @@ public:
         {
             height++;
             int s=q.size();
-            while(s--)
+            for(int i=0;i<s;i++)
             {
                 TreeNode* current=q.front();
                 q.pop();
