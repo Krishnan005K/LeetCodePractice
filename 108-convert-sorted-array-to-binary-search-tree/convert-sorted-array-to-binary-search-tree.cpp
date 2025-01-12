@@ -22,10 +22,7 @@ public:
         return tree;
     }
     TreeNode* sortedArrayToBST(vector<int>& nums) {
-        int n = nums.size();
-        if (n == 0)
-            return NULL;
-        TreeNode* root = createBinaryTree(nums, 0, n - 1);
-        return root;
+        return  createBinaryTree(nums, 0, nums.size() - 1);
+    
     }
 };
