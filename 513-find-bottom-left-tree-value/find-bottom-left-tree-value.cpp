@@ -18,9 +18,10 @@ public:
         rightView(curr->right, result, currDepth + 1);
     }
     int findBottomLeftValue(TreeNode* root) {
+        if(root==NULL)
+            return {};
         vector<int> result;
         rightView(root, result, 0);
-
         return result[result.size()-1];
 
     }
