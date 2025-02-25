@@ -9,7 +9,7 @@ public:
             digits[i] = 0;
             if (i == 0) {
                 digits.insert(digits.begin(), 1);
-                return digits;
+                
             }
         }
         return digits;        
