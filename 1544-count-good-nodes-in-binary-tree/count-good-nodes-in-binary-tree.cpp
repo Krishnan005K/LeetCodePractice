@@ -26,7 +26,22 @@ public:
         count+=goodNodeHelper(root->right,Max);
         return count;
     }
+    void Helper(TreeNode * root, int &ans,int Max)
+    {
+        if(!root)
+            return;
+        if(root->val >=Max)
+        {
+            ans++;
+            Max=root->val;
+        }
+        Helper(root->left,ans,Max);
+        Helper(root->right,ans,Max);
+    }
     int goodNodes(TreeNode* root) {
-        return goodNodeHelper(root,root->val);
+        //return goodNodeHelper(root,root->val);
+        int ans=0;
+        Helper(root,ans,root->val);
+        return ans;
     }
 };
