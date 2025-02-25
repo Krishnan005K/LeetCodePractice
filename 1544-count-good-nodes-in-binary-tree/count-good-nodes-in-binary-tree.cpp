@@ -11,19 +11,19 @@
  */
 class Solution {
 public:
-    int goodNodeHelper(TreeNode* root,int cMax)
+    int goodNodeHelper(TreeNode* root,int Max)
     {
         if(!root)
             return 0;
-        int nMax=cMax;
+      
         int count=0;
-        if(root->val>=cMax)
+        if(root->val>=Max)
         {
             count=1;
-            nMax=root->val;
+            Max=root->val;
         }
-        count+=goodNodeHelper(root->left,nMax);
-        count+=goodNodeHelper(root->right,nMax);
+        count+=goodNodeHelper(root->left,Max);
+        count+=goodNodeHelper(root->right,Max);
         return count;
     }
     int goodNodes(TreeNode* root) {
