@@ -11,21 +11,21 @@
  */
 class Solution {
 public:
-    int goodNodeHelper(TreeNode* root,int Max)
-    {
-        if(!root)
-            return 0;
+    // int goodNodeHelper(TreeNode* root,int Max)
+    // {
+    //     if(!root)
+    //         return 0;
       
-        int count=0;
-        if(root->val>=Max)
-        {
-            count=1;
-            Max=root->val;
-        }
-        count+=goodNodeHelper(root->left,Max);
-        count+=goodNodeHelper(root->right,Max);
-        return count;
-    }
+    //     int count=0;
+    //     if(root->val>=Max)
+    //     {
+    //         count=1;
+    //         Max=root->val;
+    //     }
+    //     count+=goodNodeHelper(root->left,Max);
+    //     count+=goodNodeHelper(root->right,Max);
+    //     return count;
+    // }
     void Helper(TreeNode * root, int &ans,int Max)
     {
         if(!root)
